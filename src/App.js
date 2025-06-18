@@ -1,9 +1,9 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import "bootstrap/dist/css/bootstrap.min.css"
-import './App.css';
-import Dashboard from './pages/Dashboard';
-import Header from './components/Header';
-import Sidebar from './components/Sidebar';
+import './App.scss';
+import Dashboard from './pages/Dashboard/Dashboard';
+import Header from './components/Header/Header';
+import Sidebar from './components/Sidebar/Sidebar';
 
 function App() {
   return (

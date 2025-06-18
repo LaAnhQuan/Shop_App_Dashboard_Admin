@@ -9,7 +9,7 @@ import { IoIosSettings } from "react-icons/io";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import { IoMdLogOut } from "react-icons/io";
-
+import './Sidebar.scss';
 
 const Sidebar = () => {
 

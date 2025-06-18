@@ -1,9 +1,10 @@
 import * as React from 'react';
 import { Link } from "react-router-dom";
+import './Header.scss';
 import logo from '../../assets/images/logo admin.png'
 import Button from '@mui/material/Button';
 import { MdOutlineMenuOpen } from "react-icons/md";
-import SearchBox from "../SearchBox";
+import SearchBox from "../SearchBox/SearchBox";
 import { MdLightMode } from "react-icons/md";
 import { IoCartOutline } from "react-icons/io5";
 import { MdOutlineMailOutline } from "react-icons/md";

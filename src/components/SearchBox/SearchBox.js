@@ -1,5 +1,5 @@
 import { IoSearch } from "react-icons/io5";
-
+import './SearchBox.scss';
 const SearchBox = () => {
     return (
         <div className="searchBox position-relative d-flex align-items-center">
