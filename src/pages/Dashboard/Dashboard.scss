@@ -1,1 +1,138 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+.right-content {
+    padding: 90px 30px;
+
+    .dashboardBoxWrapperRow {
+        .dashboardBoxWrapper {
+            gap: 20px;
+            width: 100%;
+            flex-wrap: wrap;
+
+            .dashboardBox {
+                width: 48%;
+                height: 170px;
+                border-radius: 10px;
+                overflow: hidden;
+                padding: 20px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                text-align: left !important;
+                position: relative;
+                color: #fff;
+                text-transform: capitalize !important;
+
+                .col1 {
+                    h4 {
+                        font-size: 16px;
+                        font-weight: 600;
+                    }
+
+                    span {
+                        font-size: 35px;
+                        font-weight: bold;
+                        line-height: 45px;
+                    }
+
+
+                }
+
+                .icon {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 50px;
+                    height: 50px;
+                    border-radius: 10px;
+                    background-image: linear-gradient(to bottom right, rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.2));
+
+                    svg {
+                        font-size: 40px;
+                        opacity: 0.4;
+                        color: #fff;
+                    }
+                }
+
+                .chart {
+                    opacity: 0.1;
+                    position: absolute;
+                    bottom: 20px;
+                    left: 20px;
+
+                    svg {
+                        font-size: 110px;
+                        color: #000;
+                    }
+                }
+
+                .bottomEle {
+                    position: relative;
+                    top: 15px;
+
+
+                }
+
+                .MuiList-root svg {
+                    color: #000 !important;
+                    font-size: 17px !important;
+                    margin-right: 10px !important;
+                }
+            }
+        }
+
+        .box {
+            width: 100%;
+            height: 100%;
+        }
+
+        .graphBox {
+            background-image: linear-gradient(#1a50b5, #2a6ff7);
+            border-radius: 10px;
+            padding: 25px;
+
+            h4 {
+                font-size: 16px;
+                font-weight: 600;
+            }
+
+            p {
+                font-size: 13px;
+                color: #fff;
+                opacity: 0.7;
+            }
+        }
+    }
+
+    .card {
+        margin: 20px 0px;
+        border-radius: 10px;
+
+        .hd {
+            font-size: 18px;
+            font-weight: bold;
+            color: #403e57;
+        }
+    }
+
+}
+
+.dropdown_menu .MuiButtonBase-root svg {
+    margin-right: 10px !important;
+}
+
+.toggleIcon {
+    font-size: 22px;
+    color: rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    min-width: 40px !important;
+    width: 40px !important;
+    height: 40px !important;
+    border-radius: 50% !important;
+
+    svg {
+        color: #fff !important;
+        font-size: 20px !important;
+        opacity: 1 !important;
+    }
+}
