@@ -8,6 +8,7 @@ $action-colors: (
 
 .right-content {
     padding: 90px 30px;
+    padding-bottom: 10px;
 
     .dashboardBoxWrapperRow {
         .dashboardBoxWrapper {
@@ -158,6 +159,10 @@ h6 {
     color: #403e57;
 }
 
+.table-responsive::-webkit-scrollbar-thumb {
+    background: #ccc !important;
+}
+
 .table {
     .thead-dark th {
         background: #1866ee !important;
@@ -245,6 +250,12 @@ table {
 
     .pagination {
         margin-left: auto;
+    }
+
+    p {
+        font-size: 14px;
+        font-weight: 500;
+        margin-bottom: 0px;
     }
 }
 
