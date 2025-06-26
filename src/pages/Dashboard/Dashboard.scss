@@ -1,5 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 
+$action-colors: (
+    secondary: rgba(203, 60, 231, 0.2),
+    success: rgba(26, 159, 83, 0.2),
+    error: rgba(241, 17, 51, 0.2)
+);
+
 .right-content {
     padding: 90px 30px;
 
@@ -34,8 +40,6 @@
                         font-weight: bold;
                         line-height: 45px;
                     }
-
-
                 }
 
                 .icon {
@@ -45,7 +49,7 @@
                     width: 50px;
                     height: 50px;
                     border-radius: 10px;
-                    background-image: linear-gradient(to bottom right, rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.2));
+                    background-image: linear-gradient(to bottom right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2));
 
                     svg {
                         font-size: 40px;
@@ -55,7 +59,7 @@
                 }
 
                 .chart {
-                    opacity: 0.1;
+                    opacity: 0.050;
                     position: absolute;
                     bottom: 20px;
                     left: 20px;
@@ -69,8 +73,6 @@
                 .bottomEle {
                     position: relative;
                     top: 15px;
-
-
                 }
 
                 .MuiList-root svg {
@@ -105,7 +107,7 @@
     }
 
     .card {
-        margin: 20px 0px;
+        margin: 20px 0;
         border-radius: 10px;
 
         .hd {
@@ -113,8 +115,18 @@
             font-weight: bold;
             color: #403e57;
         }
-    }
 
+        .cardFilters {
+            .col-md-3 {
+                h4 {
+                    font-size: 14px;
+                    font-weight: 800;
+                    text-transform: capitalize;
+                    color: #403e57;
+                }
+            }
+        }
+    }
 }
 
 .dropdown_menu .MuiButtonBase-root svg {
@@ -135,4 +147,107 @@
         font-size: 20px !important;
         opacity: 1 !important;
     }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: #403e57;
+}
+
+.table {
+    .thead-dark th {
+        background: #1866ee !important;
+        border-color: rgba(255, 255, 255, 0.1) !important;
+        font-size: 13px !important;
+    }
+
+    tbody {
+        td {
+            font-size: 14px !important;
+            color: #2f2d3e;
+            font-weight: 500;
+
+            .old,
+            .new {
+                display: block;
+                width: 100%;
+            }
+        }
+
+        .actions {
+            button {
+                min-width: 32px !important;
+                width: 32px !important;
+                height: 32px !important;
+                margin: 0 3px !important;
+
+                svg {
+                    font-size: 32px !important;
+                }
+
+                @each $type, $color in $action-colors {
+                    &.#{$type} {
+                        background: $color !important;
+                    }
+                }
+            }
+        }
+    }
+}
+
+table {
+    &.v-align td {
+        vertical-align: middle !important;
+    }
+
+    td {
+        .imgWrapper {
+            width: 20%;
+            flex: 0 0 20%;
+        }
+
+        .info {
+            width: 65%;
+            flex: 0 0 65%;
+
+            h6 {
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                font-size: 14px;
+                font-weight: 600;
+                margin-bottom: 0px;
+            }
+
+            p {
+                font-size: 13px;
+                line-height: 18px;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                color: #5e5d72;
+                margin-bottom: 0px;
+            }
+        }
+
+        .productBox {
+            width: 270px;
+        }
+    }
+}
+
+.tableFooter {
+    padding-bottom: 20px;
+
+    .pagination {
+        margin-left: auto;
+    }
+}
+
+.css-ptck8z-MuiButtonBase-root-MuiPaginationItem-root.Mui-selected {
+    background-color: #0858f7 !important;
 }
