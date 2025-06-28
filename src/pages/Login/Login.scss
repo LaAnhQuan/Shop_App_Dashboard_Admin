@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+
+.loginSection {
+    width: 100%;
+    height: 100vh;
+    padding: 35px 25px;
+    background: #fff;
+    position: relative;
+
+    .loginBox {
+        width: 350px;
+        height: auto;
+        margin: auto;
+
+        .wrapper {
+            width: 100%;
+            height: auto;
+            background: #f0f0f0;
+            position: relative;
+            z-index: 100;
+            padding: 35px;
+
+            .form-control {
+                background: #fff !important;
+                box-shadow: none !important;
+                outline: none !important;
+                border-radius: 8px !important;
+                font-size: 14px;
+                font-weight: 600;
+                height: 45px;
+                padding-left: 40px;
+
+                &:focus {
+                    border: 1px solid #0858f7 !important;
+                }
+            }
+
+            .form-group {
+                margin-bottom: 18px;
+
+                .icon {
+                    position: absolute;
+                    top: 3px;
+                    left: 10px;
+                    z-index: 100;
+                    font-size: 23px;
+
+                    svg {
+                        color: #5e5d72;
+                        ;
+                    }
+                }
+
+                &.focus {
+                    .icon {
+                        svg {
+                            color: #0858f7 !important;
+                        }
+                    }
+                }
+            }
+
+            .link {
+                font-size: 14px;
+            }
+
+            .or span {
+                &.line {
+                    display: block;
+                    width: 35%;
+                    height: 1px;
+                    background: rgba(0, 0, 0, 0.2);
+                }
+
+                &.txt {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    font-size: 16px;
+                    font-weight: 600;
+                    width: 40px;
+                    height: 40px;
+                    border: 1px solid rgba(0, 0, 0, 0.2);
+                    border-radius: 50%;
+                }
+            }
+        }
+    }
+
+
+}
+
+.loginPattern {
+    width: 100%;
+    height: 100%;
+    opacity: 0.08;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 99;
+    pointer-events: none;
+}
+
+.toggleShowPassword {
+    position: absolute;
+    top: 10px;
+    right: 8px;
+    cursor: pointer;
+}
+
+.toggleShowPassword svg {
+    font-size: 22px;
+    color: #5e5d72;
+}
+
+
+.btn-big {
+    padding: 10px 25px !important;
+    font-size: 16px !important;
+}
+
+.link {
+    color: #5e5d72;
+    font-weight: 600;
+
+    &:hover {
+        color: #0858f7 !important;
+        text-decoration: none;
+    }
+
+    .color {
+        color: #0858f7 !important;
+        text-decoration: none;
+
+    }
+}
+
+.loginWithGoogle {
+    text-transform: capitalize !important;
+    font-weight: bold !important;
+}

@@ -11,6 +11,10 @@ header {
     -webkit-backdrop-filter: blur(5px);
     backdrop-filter: blur(5px);
 
+    .part2 {
+        padding-left: 50px;
+    }
+
     .logo {
         text-decoration: none;
 
@@ -46,13 +50,23 @@ header {
     }
 }
 
+.full {
+    max-width: 100% !important;
+    flex: 0 0 100% !important;
+    width: 100% !important;
+}
+
 .btn-blue {
     background: #0858f7 !important;
     font-size: 14px !important;
     font-weight: 600;
     color: #fff !important;
     text-transform: capitalize !important;
-    border-radius: 5px !important;
+    border-radius: 8px !important;
+}
+
+.btn-lg {
+    padding: 5px 25px !important;
 }
 
 .myAcc {

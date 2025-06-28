@@ -5,23 +5,32 @@ import Dashboard from './pages/Dashboard/Dashboard';
 import Header from './components/Header/Header';
 import Sidebar from './components/Sidebar/Sidebar';
 import { useAppContext } from './context/context';
+import Login from './pages/Login/Login';
 
 function App() {
 
-  const { isToggleSidebar, setIsToggleSidebar } = useAppContext();
+  const { isToggleSidebar, setIsToggleSidebar,
+    isHideSidebarAndHeader, setIsHideSidebarAndHeader } = useAppContext();
 
   return (
     <BrowserRouter>
 
-      <Header />
+
+      {
+        isHideSidebarAndHeader !== true && <Header />
+      }
       <div className='main d-flex'>
-        <div className={`sidebarWrapper ${isToggleSidebar === true ? 'toggle' : ''}`}>
-          <Sidebar />
-        </div>
-        <div className={`content ${isToggleSidebar === true ? 'toggle' : ''}`}>
+        {
+          isHideSidebarAndHeader !== true &&
+          <div className={`sidebarWrapper ${isToggleSidebar === true ? 'toggle' : ''}`}>
+            <Sidebar />
+          </div>
+        }
+        <div className={`content ${isHideSidebarAndHeader === true && 'full'} ${isToggleSidebar === true ? 'toggle' : ''}`}>
           <Routes>
             <Route path="/" exact={true} element={<Dashboard />} />
             <Route path="/dashboard" exact={true} element={<Dashboard />} />
+            <Route path="/login" exact={true} element={<Login />} />
           </Routes>
         </div>
       </div>
