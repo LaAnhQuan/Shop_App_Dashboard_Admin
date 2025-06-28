@@ -1,0 +1,35 @@
+.signUpSection {
+    background: #f1f1f1 !important;
+    padding: 0px 0px;
+    height: auto !important;
+
+    .loginBox {
+        background: #e4e4e4 !important;
+        position: relative;
+        z-index: 100;
+        width: 100% !important;
+        padding: 25px 5px !important;
+
+        .wrapper {
+            border: 0px !important;
+            background: transparent !important;
+            padding-top: 10px !important;
+        }
+    }
+
+    .part1 {
+        padding-left: 100px;
+        padding-right: 100px;
+
+        h1 {
+            font-size: 50px;
+            font-weight: 800;
+        }
+
+        p {
+            font-size: 18px;
+            font-weight: 5600;
+        }
+
+    }
+}

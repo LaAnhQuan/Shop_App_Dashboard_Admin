@@ -5,7 +5,7 @@ import { IoMdCart } from "react-icons/io";
 import { MdShoppingBag } from "react-icons/md";
 import { GiStarsStack } from "react-icons/gi";
 import MenuItem from '@mui/material/MenuItem';
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Menu from "@mui/material/Menu";
 import { IoIosTimer } from "react-icons/io";
 import { HiDotsVertical } from "react-icons/hi";
@@ -18,6 +18,7 @@ import { FaPencilAlt } from "react-icons/fa";
 import { MdDelete } from "react-icons/md";
 import Pagination from '@mui/material/Pagination';
 import Stack from '@mui/material/Stack';
+import { useAppContext } from '../../context/context';
 
 export const chartData = [
     ["Year", "Sales", "Expenses"],
@@ -97,6 +98,13 @@ const products = [
 
 const Dashboard = () => {
     const ITEM_HEIGHT = 48;
+
+    const { isToggleSidebar, setIsToggleSidebar,
+        isHideSidebarAndHeader, setIsHideSidebarAndHeader } = useAppContext();
+
+    useEffect(() => {
+        setIsHideSidebarAndHeader(false);
+    }, [])
 
     const [anchorEl, setAnchorEl] = useState(null);
     const [showBy, setShowBy] = useState('');

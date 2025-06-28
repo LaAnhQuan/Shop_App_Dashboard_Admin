@@ -6,6 +6,8 @@ import Header from './components/Header/Header';
 import Sidebar from './components/Sidebar/Sidebar';
 import { useAppContext } from './context/context';
 import Login from './pages/Login/Login';
+import SignUp from './pages/SignUp/SignUp';
+import { useEffect } from 'react';
 
 function App() {
 
@@ -31,6 +33,7 @@ function App() {
             <Route path="/" exact={true} element={<Dashboard />} />
             <Route path="/dashboard" exact={true} element={<Dashboard />} />
             <Route path="/login" exact={true} element={<Login />} />
+            <Route path="/signUp" exact={true} element={<SignUp />} />
           </Routes>
         </div>
       </div>
