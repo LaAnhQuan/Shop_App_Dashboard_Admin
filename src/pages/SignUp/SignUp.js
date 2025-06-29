@@ -37,7 +37,7 @@ const SignUp = () => {
 
                 <div className='row'>
                     <div className='col-md-8 d-flex align-items-center flex-column part1 justify-content-center'>
-                        <h1>BEST UX/UI FASHION ECOMMERCE DASHBOARD & ADMIN PANEL</h1>
+                        <h1>BEST UX/UI FASHION <span className='text-sky'>ECOMMERCE DASHBOARD</span> & ADMIN PANEL</h1>
                         <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
                             Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
                             when an unknown printer took a galley of type and scrambled it to make a type specimen book.
@@ -67,6 +67,7 @@ const SignUp = () => {
                                             placeholder='enter your name'
                                             onFocus={() => focusInput(0)}
                                             onBlur={() => setInputIndex(null)}
+                                            autoFocus
                                         />
                                     </div>
 

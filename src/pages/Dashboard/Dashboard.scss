@@ -123,16 +123,13 @@ $action-colors: (
                     font-size: 14px;
                     font-weight: 800;
                     text-transform: capitalize;
-                    color: #403e57;
+                    // color: #403e57;
                 }
             }
         }
     }
 }
 
-.dropdown_menu .MuiButtonBase-root svg {
-    margin-right: 10px !important;
-}
 
 .toggleIcon {
     font-size: 22px;
@@ -161,6 +158,10 @@ h6 {
 
 .table-responsive::-webkit-scrollbar-thumb {
     background: #ccc !important;
+}
+
+body.dark .table-responsive::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.3) !important;
 }
 
 .table {
@@ -261,4 +262,53 @@ table {
 
 .css-ptck8z-MuiButtonBase-root-MuiPaginationItem-root.Mui-selected {
     background-color: #0858f7 !important;
+}
+
+body.dark .card {
+    background: #112143 !important;
+}
+
+body.dark .card .hd {
+    font-size: 18px;
+    font-weight: bold;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+body.dark .cardFilters .col-md-3 h4 {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+body.dark .css-sc8y68-MuiInputBase-root-MuiOutlinedInput-root-MuiSelect-root,
+body.dark .css-lohd6h-MuiSvgIcon-root-MuiSelect-icon,
+body.dark .css-d551zc-MuiSvgIcon-root-MuiSelect-icon,
+body.dark h1,
+body.dark h2,
+body.dark h3,
+body.dark h4,
+body.dark h5,
+body.dark h6,
+body.dark p {
+    color: rgba(255, 255, 255, 0.8) !important;
+}
+
+body.dark .css-1ll44ll-MuiOutlinedInput-notchedOutline {
+    border-color: rgba(255, 255, 255, 0.2) !important;
+}
+
+body.dark table td {
+    color: rgba(255, 255, 255, 0.5) !important;
+}
+
+body.dark .table-bordered td,
+.table-bordered th {
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+body.dark .css-tdnytb-MuiButtonBase-root-MuiPaginationItem-root:hover {
+    background: rgba(255, 255, 255, 0.2) !important;
+    color: #fff !important;
+}
+
+body.dark .css-tdnytb-MuiButtonBase-root-MuiPaginationItem-root {
+    color: rgba(255, 255, 255, 0.8) !important;
 }

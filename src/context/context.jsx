@@ -7,8 +7,9 @@ const AppContext = createContext();
 // 2. Tạo Provider component
 export const AppProvider = ({ children }) => {
   const [isToggleSidebar, setIsToggleSidebar] = useState(false);
-  const [isLogin, setIsLogin] = useState(false);
+  const [isLogin, setIsLogin] = useState(true);
   const [isHideSidebarAndHeader, setIsHideSidebarAndHeader] = useState(false)
+  const [themeMode, setThemeMode] = useState(true);
 
   const value = {
     isToggleSidebar,
@@ -17,6 +18,8 @@ export const AppProvider = ({ children }) => {
     setIsLogin,
     isHideSidebarAndHeader,
     setIsHideSidebarAndHeader,
+    themeMode,
+    setThemeMode,
   };
 
   return (

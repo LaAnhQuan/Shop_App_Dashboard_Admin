@@ -104,6 +104,7 @@ const Dashboard = () => {
 
     useEffect(() => {
         setIsHideSidebarAndHeader(false);
+        window.scrollTo(0, 0);
     }, [])
 
     const [anchorEl, setAnchorEl] = useState(null);

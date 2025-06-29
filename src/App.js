@@ -12,12 +12,25 @@ import { useEffect } from 'react';
 function App() {
 
   const { isToggleSidebar, setIsToggleSidebar,
-    isHideSidebarAndHeader, setIsHideSidebarAndHeader } = useAppContext();
+    isHideSidebarAndHeader, setIsHideSidebarAndHeader,
+    themeMode, setThemeMode } = useAppContext();
+
+  useEffect(() => {
+    if (themeMode === true) {
+      document.body.classList.remove('dark');
+      document.body.classList.add('light');
+      localStorage.setItem('themeMode', 'light');
+    }
+    else {
+      document.body.classList.remove('light');
+      document.body.classList.add('dark');
+      localStorage.setItem('themeMode', 'dark');
+    }
+
+  }, [themeMode])
 
   return (
     <BrowserRouter>
-
-
       {
         isHideSidebarAndHeader !== true && <Header />
       }

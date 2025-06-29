@@ -30,9 +30,7 @@ const Header = () => {
     const [isOpenNotificationDrop, setIsOpenNotificationDrop] = React.useState(false);
     const openMyAcc = Boolean(anchorEl);
     const openNotifications = Boolean(isOpenNotificationDrop);
-
-    const [isLogin, setIsLogin] = useState(true);
-    const { isToggleSidebar, setIsToggleSidebar } = useAppContext();
+    const { isToggleSidebar, setIsToggleSidebar, themeMode, setThemeMode, isLogin, setIsLogin } = useAppContext();
 
     const handleOpenMyAccDrop = (event) => {
         setAnchorEl(event.currentTarget);
@@ -73,7 +71,9 @@ const Header = () => {
                         </div>
                         <div className="col-sm-7 d-flex align-items-center 
                         justify-content-end part3">
-                            <Button className="rounded-circle mr-3"><MdLightMode /></Button>
+                            <Button className="rounded-circle mr-3" onClick={() => setThemeMode(!themeMode)}>
+                                <MdLightMode />
+                            </Button>
                             <Button className="rounded-circle mr-3"><IoCartOutline /></Button>
                             <Button className="rounded-circle mr-3"><MdOutlineMailOutline /></Button>
                             <div className='dropdownWrapper position-relative'>
@@ -253,7 +253,7 @@ const Header = () => {
                             </div>
 
                             {
-                                isLogin === true ?
+                                isLogin === false ?
                                     <Link to={'/login'}>
                                         <Button className='btn-blue btn-lg btn-round'>Sign In</Button>
                                     </Link>

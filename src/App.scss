@@ -11,6 +11,10 @@ body {
   overflow-x: hidden;
 }
 
+body.dark {
+  background: #071739 !important;
+}
+
 // Scrollbar custom
 ::-webkit-scrollbar {
   width: 5px !important;
